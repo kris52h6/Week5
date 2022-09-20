@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>EX2</title>
+
+        <style>
+            .my-div {
+                width: 25px;
+                height: 25px;
+                background-color: red;
+                margin: 1px;
+            }
+        </style>
+    </head>
+    <div id="outer">
+        <div class="my-div" id="div1"></div>
+        <div class="my-div" id="div2"></div>
+        <div class="my-div" id="div3"></div>
+        <div class="my-div" id="div4"></div>
+        <div class="my-div" id="div5"></div>
+        <div class="my-div" id="div6"></div>
+        <div class="my-div" id="div7"></div>
+        <div class="my-div" id="div8"></div>
+        <div class="my-div" id="div9"></div>
+        <div class="my-div" id="div10"></div>
+        <p id="paragraph"></p>
+    </div>
+    <body>
+        <script>
+            window.addEventListener("load", ex2());
+
+            function ex2() {
+                // exercise a
+                // const divs = document.querySelectorAll("div");
+                // console.log(divs);
+                // for (let i = 1; i < divs.length; i++) {
+                //     divs[i].addEventListener("click", (e) => {
+                //         console.log("Hi I'm from " + e.target.id);
+                //     });
+                // }
+
+                // exercise b
+                // const div = document.querySelector("#outer");
+                // div.addEventListener("click", (e) => {
+                //     console.log("Hi I'm from " + e.target.id);
+                // });
+
+                // exercise c
+                const div = document.querySelector("#outer");
+                const paragraph = document.querySelector("#paragraph");
+                div.addEventListener("click", (e) => {
+                    paragraph.innerHTML = "Hi I'm from " + e.target.id;
+                });
+            }
+        </script>
+    </body>
+</html>
