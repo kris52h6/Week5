@@ -7,6 +7,52 @@
         <title>EX3</title>
     </head>
     <body>
-        <script></script>
+        <ul id="ul"></ul>
+
+        <form id="form">
+            <input id="form-input" type="text" />
+            <button id="btn1">Add</button>
+            <button id="btn2">Remove First</button>
+            <button id="btn3">Remove last</button>
+        </form>
+        <script>
+            const list = ["Lars", "Peter", "Jan", "Ian"];
+            window.addEventListener("load", ex3());
+
+            function ex3() {
+                const ul = document.querySelector("#ul");
+
+                ul.innerHTML = list.map((name) => `<li>${name}</li>`).join("");
+
+                // Add eventlisteners for buttons
+                document.querySelector("#btn1").addEventListener("click", (e) => addName(e));
+                document.querySelector("#btn2").addEventListener("click", (e) => removeFirst(e));
+                document.querySelector("#btn3").addEventListener("click", (e) => removeLast(e));
+            }
+
+            function addName(e) {
+                e.preventDefault();
+                const name = document.querySelector("#form-input").value;
+
+                list.push(name);
+                updateList();
+            }
+
+            function removeFirst(e) {
+                e.preventDefault();
+                list.shift();
+                updateList();
+            }
+
+            function removeLast(e) {
+                e.preventDefault();
+                list.pop();
+                updateList();
+            }
+
+            function updateList() {
+                ul.innerHTML = list.map((name) => `<li>${name}</li>`).join("");
+            }
+        </script>
     </body>
 </html>
