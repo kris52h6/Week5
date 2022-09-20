@@ -17,11 +17,10 @@
         </form>
         <script>
             const list = ["Lars", "Peter", "Jan", "Ian"];
-            window.addEventListener("load", ex3());
+            window.addEventListener("load", init());
 
-            function ex3() {
+            function init() {
                 const ul = document.querySelector("#ul");
-
                 ul.innerHTML = list.map((name) => `<li>${name}</li>`).join("");
 
                 // Add eventlisteners for buttons
