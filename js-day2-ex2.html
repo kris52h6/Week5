@@ -15,46 +15,21 @@
             }
         </style>
     </head>
-    <div id="outer">
-        <div class="my-div" id="div1"></div>
-        <div class="my-div" id="div2"></div>
-        <div class="my-div" id="div3"></div>
-        <div class="my-div" id="div4"></div>
-        <div class="my-div" id="div5"></div>
-        <div class="my-div" id="div6"></div>
-        <div class="my-div" id="div7"></div>
-        <div class="my-div" id="div8"></div>
-        <div class="my-div" id="div9"></div>
-        <div class="my-div" id="div10"></div>
-        <p id="paragraph"></p>
-    </div>
+
     <body>
-        <script>
-            window.addEventListener("load", ex2());
-
-            function ex2() {
-                // exercise a
-                // const divs = document.querySelectorAll("div");
-                // console.log(divs);
-                // for (let i = 1; i < divs.length; i++) {
-                //     divs[i].addEventListener("click", (e) => {
-                //         console.log("Hi I'm from " + e.target.id);
-                //     });
-                // }
-
-                // exercise b
-                // const div = document.querySelector("#outer");
-                // div.addEventListener("click", (e) => {
-                //     console.log("Hi I'm from " + e.target.id);
-                // });
-
-                // exercise c
-                const div = document.querySelector("#outer");
-                const paragraph = document.querySelector("#paragraph");
-                div.addEventListener("click", (e) => {
-                    paragraph.innerHTML = "Hi I'm from " + e.target.id;
-                });
-            }
-        </script>
+        <div id="outer">
+            <div class="my-div" id="div1"></div>
+            <div class="my-div" id="div2"></div>
+            <div class="my-div" id="div3"></div>
+            <div class="my-div" id="div4"></div>
+            <div class="my-div" id="div5"></div>
+            <div class="my-div" id="div6"></div>
+            <div class="my-div" id="div7"></div>
+            <div class="my-div" id="div8"></div>
+            <div class="my-div" id="div9"></div>
+            <div class="my-div" id="div10"></div>
+            <p id="paragraph"></p>
+        </div>
+        <script src="ex2.js"></script>
     </body>
 </html>
