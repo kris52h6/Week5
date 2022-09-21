@@ -22,19 +22,19 @@ function init() {
 
 function getDisplay() {
     const paragraph = display.innerText;
-    if (paragraph.indexOf("*")) {
+    if (paragraph.indexOf("*") == 1) {
         const split = paragraph.split("*");
         display.innerHTML = calculateDisplay("*", split);
     }
-    if (paragraph.indexOf("/")) {
+    if (paragraph.indexOf("/") == 1) {
         const split = paragraph.split("/");
         display.innerHTML = calculateDisplay("/", split);
     }
-    if (paragraph.indexOf("-")) {
+    if (paragraph.indexOf("-") == 1) {
         const split = paragraph.split("-");
         display.innerHTML = calculateDisplay("-", split);
     }
-    if (paragraph.indexOf("+")) {
+    if (paragraph.indexOf("+") == 1) {
         const split = paragraph.split("+");
         display.innerHTML = calculateDisplay("+", split);
     }
@@ -46,12 +46,16 @@ function calculateDisplay(str, paragraph) {
 
     switch (str) {
         case "*":
+            console.log(n1 * n2);
             return n1 * n2;
         case "/":
+            console.log(n1 / n2);
             return n1 / n2;
         case "-":
+            console.log(n1 - n2);
             return n1 - n2;
         case "+":
+            console.log(n1 + n2);
             return n1 + n2;
     }
 }

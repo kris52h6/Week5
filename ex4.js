@@ -23,13 +23,13 @@ function init() {
     });
 
     // clear button
-    document.querySelector("#clear-btn").addEventListener("click", (e) => {
+    document.querySelector("#clear-btn").addEventListener("click", () => {
         document.querySelector("#input").value = "";
         updateCars(cars);
     });
 
     // price sorting
-    document.querySelector("#price-header").addEventListener("click", (e) => {
+    document.querySelector("#price-header").addEventListener("click", () => {
         sortList();
     });
 }
