@@ -16,6 +16,7 @@ function fetchCountry(countryId) {
     fetch(url + countryId).then((res) =>
         res.json().then((country) => {
             console.log(country);
+            document.querySelector("#flag").src = country.flag;
             document.querySelector("#country > span").innerText = country.name.common;
             document.querySelector("#un-member > span").innerText = country.unMember;
             for (const property in country.currencies) {
